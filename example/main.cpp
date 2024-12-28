@@ -30,20 +30,6 @@ int main(int argc, char *argv[])
 {
     application::helper::ArgumentConfiguration _argumentConfiguration(argc, argv);
 
-    bool _successful{_argumentConfiguration.TryAskingVccApiKey()};
-    if (!_successful)
-    {
-        std::cout << "Asking for the VCC API key failed!";
-        return -1;
-    }
-
-    std::system("clear");
-    _successful = _argumentConfiguration.TryAskingBearToken();
-    if (!_successful)
-    {
-        std::cout << "Asking for the OAuth 2.0 bear key failed!";
-        return -1;
-    }
 
     running = true;
     executionManagement = new application::platform::ExecutionManagement(&poller);
