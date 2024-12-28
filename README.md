@@ -43,10 +43,16 @@ cmake --build build
 ### Installing
 
 ```
-cd build
-sudo make install
+sudo cmake --install build
+
 ```
 
+### Uninstalling 
+
+```
+sudo cmake --build build --target uninstall
+
+```
 
 
 ### Unit tests running

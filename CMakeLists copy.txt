@@ -134,59 +134,59 @@ set(CMAKE_INSTALL_PREFIX /usr/local/ara_libs)
 # Install the library and headers for each component
 install(DIRECTORY src/arxml/
         DESTINATION include/arxml
-        FILES_MATCHING PATTERN "*.h" PATTERN "*.hpp")
+        FILES_MATCHING PATTERN "*.h")
 
 install(DIRECTORY src/ara/core/
         DESTINATION include/ara/core
-        FILES_MATCHING PATTERN "*.h" PATTERN "*.hpp")
+        FILES_MATCHING PATTERN "*.h")
 
 install(DIRECTORY src/ara/log/
         DESTINATION include/ara/log
-        FILES_MATCHING PATTERN "*.h" PATTERN "*.hpp")
+        FILES_MATCHING PATTERN "*.h")
 
 install(DIRECTORY src/ara/com/
         DESTINATION include/ara/com
-        FILES_MATCHING PATTERN "*.h" PATTERN "*.hpp")
+        FILES_MATCHING PATTERN "*.h")
 
 install(DIRECTORY src/ara/sm/
         DESTINATION include/ara/sm
-        FILES_MATCHING PATTERN "*.h" PATTERN "*.hpp")
+        FILES_MATCHING PATTERN "*.h")
 
 install(DIRECTORY src/ara/exec/
         DESTINATION include/ara/exec
-        FILES_MATCHING PATTERN "*.h" PATTERN "*.hpp")
+        FILES_MATCHING PATTERN "*.h")
 
 install(DIRECTORY src/ara/diag/
         DESTINATION include/ara/diag
-        FILES_MATCHING PATTERN "*.h" PATTERN "*.hpp")
+        FILES_MATCHING PATTERN "*.h")
 
 install(DIRECTORY src/ara/phm/
         DESTINATION include/ara/phm
-        FILES_MATCHING PATTERN "*.h" PATTERN "*.hpp")
+        FILES_MATCHING PATTERN "*.h")
 
 install(DIRECTORY build/_deps/async-bsd-socket-lib-src/include/asyncbsdsocket/
         DESTINATION include/asyncbsdsocket
-        FILES_MATCHING PATTERN "*.h" PATTERN "*.hpp")
+        FILES_MATCHING PATTERN "*.h")
 
 install(DIRECTORY build/_deps/googletest-src/include/
         DESTINATION include/googletest
-        FILES_MATCHING PATTERN "*.h" PATTERN "*.hpp")
+        FILES_MATCHING PATTERN "*.h")
 
 install(DIRECTORY build/_deps/jsoncpp_lib-src/include/
         DESTINATION include/jsoncpp
-        FILES_MATCHING PATTERN "*.h" PATTERN "*.hpp")
+        FILES_MATCHING PATTERN "*.h")
 
 install(DIRECTORY build/_deps/libcurl-src/include/
-        DESTINATION include
-        FILES_MATCHING PATTERN "*.h" PATTERN "*.hpp")
+        DESTINATION include/curl
+        FILES_MATCHING PATTERN "*.h")
 
 install(DIRECTORY build/_deps/obd-ii-emulator-src/include/
-        DESTINATION include/
-        FILES_MATCHING PATTERN "*.h" PATTERN "*.hpp")
+        DESTINATION include/obd_ii_emulator
+        FILES_MATCHING PATTERN "*.h")
 
 install(DIRECTORY build/_deps/doip-lib-src/include/
-        DESTINATION include
-        FILES_MATCHING PATTERN "*.h" PATTERN "*.hpp")
+        DESTINATION include/doip_lib
+        FILES_MATCHING PATTERN "*.h")
 
 # Ensure all .cpp files in src/ara/core are installed
 install(FILES
