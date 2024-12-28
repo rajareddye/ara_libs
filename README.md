@@ -6,7 +6,7 @@ Adaptive AUTOSAR is a simulated _Adaptive Platform_ environment over Linux defin
 
 
 ## Dependecies
-
+make it installable libs and use those for application
 It will be tried to use minimum number of dependencies as much as possible. The current dependencies are as follows:
 
 - Cpp Standard: 14
@@ -82,3 +82,4 @@ Please refer to [the project GitHub pages](https://langroodi.github.io/Adaptive-
 ## Contribution
 
 Please refer to [the contributing page](https://github.com/langroodi/Adaptive-AUTOSAR/blob/master/CONTRIBUTING.md).
+
