@@ -96,11 +96,11 @@ endmacro()
 # Check for required source files before adding subdirectories
 macro(check_required_files)
   set(required_files
-    "src/arxml/pugixml.hpp"
-    "src/ara/core/result.h"
-    "src/ara/core/error_domain.h"
-    "src/ara/sm/trigger.h"
-    "src/ara/phm/checkpoint_communicator.cpp"
+    "libs/arxml/pugixml.hpp"
+    "libs/ara/core/result.h"
+    "libs/ara/core/error_domain.h"
+    "libs/ara/sm/trigger.h"
+    "libs/ara/phm/checkpoint_communicator.cpp"
   )
   foreach(file ${required_files})
     if(NOT EXISTS ${CMAKE_SOURCE_DIR}/${file})
@@ -111,15 +111,14 @@ endmacro()
 
 check_required_files()
 
-add_if_exists(src/arxml)
-add_if_exists(src/ara/core)
-add_if_exists(src/ara/log)
-add_if_exists(src/ara/com)
-add_if_exists(src/ara/sm)
-add_if_exists(src/ara/exec)
-add_if_exists(src/ara/diag)
-add_if_exists(src/ara/phm)
-# add_if_exists(src/application)  # Uncomment to include the application directory
+add_if_exists(libs/arxml)
+add_if_exists(libs/ara/core)
+add_if_exists(libs/ara/log)
+add_if_exists(libs/ara/com)
+add_if_exists(libs/ara/sm)
+add_if_exists(libs/ara/exec)
+add_if_exists(libs/ara/diag)
+add_if_exists(libs/ara/phm)
 
 # Ensure required source files are added in their respective CMakeLists.txt
 set_target_properties(ara_sm PROPERTIES LINKER_LANGUAGE CXX)
@@ -132,35 +131,35 @@ set_target_properties(ara_sm PROPERTIES LINKER_LANGUAGE CXX)
 set(CMAKE_INSTALL_PREFIX /usr/local/ara_libs)
 
 # Install the library and headers for each component
-install(DIRECTORY src/arxml/
+install(DIRECTORY libs/arxml/
         DESTINATION include/arxml
         FILES_MATCHING PATTERN "*.h" PATTERN "*.hpp")
 
-install(DIRECTORY src/ara/core/
+install(DIRECTORY libs/ara/core/
         DESTINATION include/ara/core
         FILES_MATCHING PATTERN "*.h" PATTERN "*.hpp")
 
-install(DIRECTORY src/ara/log/
+install(DIRECTORY libs/ara/log/
         DESTINATION include/ara/log
         FILES_MATCHING PATTERN "*.h" PATTERN "*.hpp")
 
-install(DIRECTORY src/ara/com/
+install(DIRECTORY libs/ara/com/
         DESTINATION include/ara/com
         FILES_MATCHING PATTERN "*.h" PATTERN "*.hpp")
 
-install(DIRECTORY src/ara/sm/
+install(DIRECTORY libs/ara/sm/
         DESTINATION include/ara/sm
         FILES_MATCHING PATTERN "*.h" PATTERN "*.hpp")
 
-install(DIRECTORY src/ara/exec/
+install(DIRECTORY libs/ara/exec/
         DESTINATION include/ara/exec
         FILES_MATCHING PATTERN "*.h" PATTERN "*.hpp")
 
-install(DIRECTORY src/ara/diag/
+install(DIRECTORY libs/ara/diag/
         DESTINATION include/ara/diag
         FILES_MATCHING PATTERN "*.h" PATTERN "*.hpp")
 
-install(DIRECTORY src/ara/phm/
+install(DIRECTORY libs/ara/phm/
         DESTINATION include/ara/phm
         FILES_MATCHING PATTERN "*.h" PATTERN "*.hpp")
 
@@ -188,10 +187,10 @@ install(DIRECTORY build/_deps/doip-lib-src/include/
         DESTINATION include
         FILES_MATCHING PATTERN "*.h" PATTERN "*.hpp")
 
-# Ensure all .cpp files in src/ara/core are installed
+# Ensure all .cpp files in libs/ara/core are installed
 install(FILES
-        src/ara/core/error_code.cpp
-        src/ara/core/instance_specifier.cpp
+        libs/ara/core/error_code.cpp
+        libs/ara/core/instance_specifier.cpp
         DESTINATION lib/ara/core
 )
 
