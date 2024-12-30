@@ -28,7 +28,10 @@ It will be tried to use minimum number of dependencies as much as possible. The 
 
 - GCC:
 ```bash
+sudo apt  install cmake gcc-11 g++-11 libssl-dev libldap2-dev libpsl-dev libssh2-1-dev
+
 cmake -DCMAKE_BUILD_TYPE:STRING=Debug -DCMAKE_C_COMPILER:FILEPATH=/usr/bin/x86_64-linux-gnu-gcc-11 -DCMAKE_CXX_COMPILER:FILEPATH=/usr/bin/x86_64-linux-gnu-g++-11 -S . -B build
+
 ```
 - Clang:
 ```bash
